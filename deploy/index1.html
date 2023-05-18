@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RouteMAX - Resource Utilization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://optym.com/wp-content/uploads/2022/07/Optym_Logo_DT_TwoColor.svg" alt="" class="d-inline-block align-text-top logo">
+            <h4><a href="login2.html">Home </h4></a>
+          </a>
+        </div>
+    </nav>
+    
+    
+   
+    <div class="container">
+        <h1>RouteMAX Resource Details</h1>
+        <div class="row">
+            <div class="card col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <select class="form-select" aria-label="RouteMAX Module" id="module">
+                            <option selected value="0">Choose RouteMAX Module</option>
+                            <option value="ibplanning">IBPlanning</option>
+                            <option value="dispatch">IBPlanning & Dispatch</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" aria-label="RouteMAX Environment" id="environment">
+                            <option selected value="0">Choose Environment</option>
+                            <option value="prod">PROD</option>
+                            <option value="nonprod">NON-PROD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div class="padding-10"></div>
+        <div class="margin-top-2"></div>
+        <div class="row">
+            <div class="col-12">
+                <!--ibplanning-prod-->
+                <div class="card hide ibplanning-prod">
+                    <h3>RouteMAX IBPlanning - PROD</h3>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Resource Type</th>
+                            <th scope="col">Resource Settings</th>
+                            <th scope="col">Resource Allowed Limits</th>
+                            <th scope="col">Resource Suggestion</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Application Gateway</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>AppGw Backend Settings</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AppGw Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>No. Of Sites</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Backend Address Pool</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>FrontendPrivate IP Port</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>100 for Standard_V2, 40 for WAF_V2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200 Total Listener/ 100 Active Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100 / 1 per HTTP listener</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>6 (4 IBP + 2 Keycloak)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 (only external)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 external</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>2 (only external)</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">AKS</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Min Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU Request</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>CPU Limit</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Memory Request</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Memory Limit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main Nodes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Nodes</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.45 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>10.65 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>7.28 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11.33 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Azure SQL Elastic Pool</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Storage</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>128 Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NP - 1500 GB / 4 TB
+                                            MPROD - 1000 GB / 4 TB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>6 vCores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           28.58 GB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Load Balancer</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Frontend IP (egress)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SNAT Ports / Node</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>600/Per LB used by a single AKS cluster</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            x = Total SNAT Ports / (Sum(Max Node Count across all nodepools) + Number of Nodepools{if there is no max_surge defined})
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           8528
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Event Hub</th>
+                            <td>https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-quotas</td>
+                            <td>
+                                <table>
+                                    <tr><td>#Schema Registry</td></tr>
+                                    <tr><td>#TU,PU,CU</td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr><td>NA</td></tr>
+                                    <tr><td>2 (Driver + Location)</td></tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Prefix</th>
+                            <td></td>
+                            <td>Total Ips</td>
+                            <td>3 (2 Egress + 1 Ingress)</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Service Bus</th>
+                            <td></td>
+                            <td>1000 - namespaces,
+                                5000 - Queues
+                            </td>
+                            <td>3(2 Common + 1 Dynamic)</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card hide ibplanning-nonprod">
+                    <!--ibplanning-nonprod-->
+                    <h3>RouteMAX IBPlanning - Non-PROD</h3>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Resource Type</th>
+                            <th scope="col">Resource Settings</th>
+                            <th scope="col">Resource Allowed Limits</th>
+                            <th scope="col">Resource Suggestion</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Application Gateway</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>AppGw Backend Settings</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AppGw Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>No. Of Sites</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Backend Address Pool</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>FrontendPrivate IP Port</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>100 for Standard_V2, 40 for WAF_V2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200 Total Listener/ 100 Active Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100 / 1 per HTTP listener</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>7 ( 5 IBP + 2 Keycloak ) </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 ( 2 external + 1 internal)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 ( 1 external + 1 internal)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>3 ( 2 external + 1 internal)</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">AKS</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Min Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU Request</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>CPU Limit</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Memory Request</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Memory Limit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main Nodes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Nodes</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>64</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.92 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>4.8 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>3.46 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.24 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Azure SQL Elastic Pool</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Storage</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>128 Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NP - 1500 GB / 4 TB
+                                            MPROD - 1000 GB / 4 TB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>6 vCores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            10.16 GB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Load Balancer</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Frontend IP (egress)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SNAT Ports / Node</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>600/Per LB used by a single AKS cluster</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            x = Total SNAT Ports / (Sum(Max Node Count across all nodepools) + Number of Nodepools{if there is no max_surge defined})
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           8528
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Event Hub</th>
+                            <td>https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-quotas</td>
+                            <td>
+                                <table>
+                                    <tr><td>#Schema Registry</td></tr>
+                                    <tr><td>#TU,PU,CU</td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr><td>NA</td></tr>
+                                    <tr><td>2 (Driver + Location)</td></tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Prefix</th>
+                            <td></td>
+                            <td>Total Ips</td>
+                            <td>3 (2 Egress + 1 Ingress)</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Service Bus</th>
+                            <td></td>
+                            <td>1000 - namespaces,
+                                5000 - Queues
+                            </td>
+                            <td>3(2 Common + 1 Dynamic)</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- dispatch -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card hide dispatch-prod">
+                    <!--Dispatch PROD-->
+                    <h3>RouteMAX IBPlanning & Dispatch - PROD</h3>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Resource Type</th>
+                            <th scope="col">Resource Settings</th>
+                            <th scope="col">Resource Allowed Limits</th>
+                            <th scope="col">Resource Suggestion</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Application Gateway</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>AppGw Backend Settings</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AppGw Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>No. Of Sites</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Backend Address Pool</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>FrontendPrivate IP Port</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>100 for Standard_V2, 40 for WAF_V2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200 Total Listener/ 100 Active Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100 / 1 per HTTP listener</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>9 ( 4 IBP +3 DSP + 2 KC )</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 (only external)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 external</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>2 (only external)</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">AKS</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Min Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU Request</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>CPU Limit</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Memory Request</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Memory Limit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main Nodes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Nodes</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>83</td>
+                                    </tr>
+                                    <tr>
+                                        <td>194</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>44.5 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>29.8 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>43.7 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Azure SQL Elastic Pool</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Storage</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>128 Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NP - 1500 GB / 4 TB
+                                            MPROD - 1000 GB / 4 TB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>14 vCores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            252.38 GB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Load Balancer</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Frontend IP (egress)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SNAT Ports / Node</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>600/Per LB used by a single AKS cluster</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            x = Total SNAT Ports / (Sum(Max Node Count across all nodepools) + Number of Nodepools{if there is no max_surge defined})
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           8528
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Event Hub</th>
+                            <td>https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-quotas</td>
+                            <td>
+                                <table>
+                                    <tr><td>#Schema Registry</td></tr>
+                                    <tr><td>#TU,PU,CU</td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr><td>NA</td></tr>
+                                    <tr><td>2 (Driver + Location)</td></tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Prefix</th>
+                            <td></td>
+                            <td>Total Ips</td>
+                            <td>3 (2 Egress + 1 Ingress)</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Service Bus</th>
+                            <td></td>
+                            <td>1000 - namespaces,
+                                5000 - Queues
+                            </td>
+                            <td>9 (8 (C + D) + 1 Dynamic)</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card hide dispatch-nonprod">
+                    <!--Dispatch NonProd-->
+                    <h3>RouteMAX IBPlanning & Dispatch - Non-PROD</h3>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Resource Type</th>
+                            <th scope="col">Resource Settings</th>
+                            <th scope="col">Resource Allowed Limits</th>
+                            <th scope="col">Resource Suggestion</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Application Gateway</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>AppGw Backend Settings</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AppGw Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>No. Of Sites</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Backend Address Pool</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>FrontendPrivate IP Port</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>100 for Standard_V2, 40 for WAF_V2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200 Total Listener/ 100 Active Listeners</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100 / 1 per HTTP listener</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>100</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>10 ( 5 IBP +3 DSP + 2 KC )</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 ( 2 external + 1 internal)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 ( 1 external + 1 internal)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>3 ( 2 external + 1 internal)</td>
+                                    </tr>    
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">AKS</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Min Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU Request</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>CPU Limit</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Memory Request</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Memory Limit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main Nodes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Nodes</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>71</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.8 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>13.2 CPU(s)</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>8.2 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12.3 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Azure SQL Elastic Pool</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Storage</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>128 Cores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NP - 1500 GB / 4 TB
+                                            MPROD - 1000 GB / 4 TB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>6 vCores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            42.23 GB
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Load Balancer</th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Frontend IP (egress)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SNAT Ports / Node</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>600/Per LB used by a single AKS cluster</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            x = Total SNAT Ports / (Sum(Max Node Count across all nodepools) + Number of Nodepools{if there is no max_surge defined})
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           8528
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Event Hub</th>
+                            <td>https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-quotas</td>
+                            <td>
+                                <table>
+                                    <tr><td>#Schema Registry</td></tr>
+                                    <tr><td>#TU,PU,CU</td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr><td>NA</td></tr>
+                                    <tr><td>2 (Driver + Location)</td></tr>
+                                </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Prefix</th>
+                            <td></td>
+                            <td>Total Ips</td>
+                            <td>3 (2 Egress + 1 Ingress)</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Service Bus</th>
+                            <td></td>
+                            <td>1000 - namespaces,
+                                5000 - Queues
+                            </td>
+                            <td>9 (8 (C + D) + 1 Dynamic)</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
